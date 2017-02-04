@@ -1,0 +1,36 @@
+﻿<div class="clearfix">
+    <img src="/Public/images/about/flux_arc.png" class="pull-right col-md-7" />
+    <p>In this project it was used angular 1.* with ECMAScript 6 syntax, FLUX architecture, Karma with Jasmine for unit testing and webpack.</p>
+    <p>
+        For download node_modules rum cmd, change project directory and run command: <br>
+        <code>npm i</code>
+    </p> <br>
+    <p>
+        For run development\production build rum cmd, change project directory and run command: <br>
+        <code>SET NODE_ENV=development && webpack</code> <br>
+        <code>SET NODE_ENV=production && webpack</code>
+        Or simply run build in Task Runner Exploler.
+    </p>
+    <p>For run unit tests just use <code>npm test</code> command.</p>
+
+</div>
+<div class="clearfix">
+    <img src="/Public/images/about/task_runner.png" class="pull-left" />
+    <p>
+        For a more comfortable work with webpack i used WebPack Task Runner. <a href="https://marketplace.visualstudio.com/items?itemName=MadsKristensen.WebPackTaskRunner">Download</a>
+    </p>
+    <br />
+    <p>
+        On Cards tab was used simple custom dispatcher and added logs. It's bad for used in projects, but easy debugging and can help understand better flux architecture. Logs available only in development, because in production build Webpack compress scripts and styles, dont create source maps and delete logs.
+    </p>
+    <p>
+        On Comments tab was used already created dispatcher for angular <a href="https://www.npmjs.com/package/flux-angular">https://www.npmjs.com/package/flux-angular</a>.
+    </p>
+</div>
+<div class="clearfix">
+    <img src="/Public/images/about/karma error.PNG" class="pull-right col-md-7" />
+    <p>
+        If you have this issue when running karma test, try to comment this line: <code>response.setHeader('Expires', (new Date(0)).toString())</code>  in  "node_modules/karma/lib/middleware/commonjs". It works for me.
+    </p>
+    <br />
+</div>

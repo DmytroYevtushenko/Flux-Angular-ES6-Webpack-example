@@ -1,0 +1,14 @@
+﻿<div class="input-group">
+    <input type="text" class="form-control" ng-model="comment">
+    <div class="input-group-btn">
+        <input type="button" class="btn btn-default" value="Add" ng-click="commentsCtrl.addComment(comment)"/>
+    </div>
+</div>
+
+<div class="alert alert-info alert-dismissible" role="alert" ng-show="message">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <strong>Hey!</strong> New comment "{{message}}". I showed notification, while comments store was waiting, and after this comment was displayed.
+</div>
+<ul class="list-group">
+    <li class="list-group-item" ng-repeat="item in comments">{{item.comment}}</li>
+</ul>

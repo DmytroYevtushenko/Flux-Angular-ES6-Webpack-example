@@ -1,0 +1,47 @@
+﻿<div class="row">
+    <div class="col-md-8" ng-controller="CatalogController as catalog">
+        <div class="catalog-container">
+            <ul class="cbp-rfgrid">
+                <li style="margin-bottom: 15px" ng-repeat="item in catalog.catalogItems" class="li-wopicture">
+                    <div class="thumbnail picture-card">
+                        <a title="{{item.Name}}">
+                            <img ng-src="Public/images/{{item.Image}}" alt="card">
+                        </a>
+                        <div class="caption">
+                            <div class="picture_desc">
+                                Price: {{item.Price}}
+                                <button ng-click="catalog.addToCart(item)" type="button" class="btn btn-default" aria-label="Left Align">
+                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-4" ng-controller="CartController as cart">
+        <h1>Your cart:</h1>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Remove</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="item in cart.items">
+                <td>{{item.catalogItem.Name}}</td>
+                <td>x{{item.qty}}</td>
+                <td>
+                    <button ng-click="cart.removeItem(item)" type="button" class="btn btn-danger" aria-label="Left Align">
+                        Remove
+                    </button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div ng-hide="cart.total===0" class="col-md-12">Total: {{cart.total | currency}}</div>
+    </div>
+</div>
