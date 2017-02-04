@@ -40,7 +40,11 @@
   "scripts": {
     "test": "karma start",
     "test-watch": "karma start --auto-watch --no-single-run"
-  }, 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DmytroYevtushenko/Flux-Angular-ES6-Webpack-example.git"
+  },
   "author": "Yevtushenko Dmitriy",
   "license": "ISC"
 }
