@@ -185,6 +185,7 @@
     <Content Include="App\src\home\style\home.css" />
     <Content Include="App\src\home\views\home.html" />
     <Content Include="App\src\tests.webpack.js" />
+    <Content Include="App\src\tests\commentsStore.test.js" />
     <Content Include="App\src\tests\home.controller.test.js" />
     <Content Include="App\src\comments\constants\actions.js" />
     <Content Include="App\src\comments\services\commentActions.js" />
